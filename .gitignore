@@ -1,0 +1,5 @@
+/docs/
+/.vscode/
+/node_modules/
+knexfile.ts
+yarn.lock

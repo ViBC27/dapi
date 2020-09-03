@@ -1,0 +1,15 @@
+type Experience {
+  id: Int!
+  url: String
+  github: String
+  bitbucket: String
+  role: String!
+  name: String!
+  notes: String!
+  type: String!
+  admissionAt: Date!
+  dismissalAt: Date
+  createdAt: Date!
+  updatedAt: Date
+  idPersons: Int!
+}

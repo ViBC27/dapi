@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "target": "es2020",
+    "module": "commonjs",
+    "sourceMap": true,
+    "rootDir": "./",
+    "outDir": "./bin",
+    "types": ["node", "jest"],
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": ".",
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "lodash/*": ["node_modules/@types/lodash-es/*"]
+    }
+  },
+  "exclude": ["/docs/", "/.vscode/", "/node_modules/", "**/*.test.ts"]
+}
