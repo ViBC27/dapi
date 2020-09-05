@@ -1,0 +1,7 @@
+type Award {
+  year: Date!
+  name: String!
+  entity: String!
+  createdAt: String!
+  updatedAt: String!
+}

@@ -1,7 +1,7 @@
 import * as Knex from 'knex';
 import Person from '../models/Person';
 
-export async function seed(knex: Knex): Promise<Person[]> {
+export function seed(knex: Knex): Promise<Person[]> {
   return Person.query(knex).insert([
     {
       id: 1,

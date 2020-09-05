@@ -1,27 +1,19 @@
-import path from 'path';
-import { RelationMappings } from 'objection';
-import BaseModel from './BaseModel';
+import BaseModelV2 from './BaseModelV2';
+import PersonQueries from '../queries/Person';
+import PersonMappings from '../mappings/Person';
 
-class Person extends BaseModel {
+class Person extends BaseModelV2 {
   id: number;
   name: string;
   email: string;
-  createdAt: Date;
-  updatedAt: Date;
   pathname: string;
   username: string;
   password: string;
   identity: string;
   static tableName = 'persons';
-  static get relationMappings(): RelationMappings {
-    return {
-      experiences: {
-        relation: BaseModel.HasManyRelation,
-        modelClass: path.join(__dirname, 'Experience'),
-        join: { from: 'persons.id', to: 'experiences.idPersons' }
-      }
-    };
-  }
+  static relationMappings = PersonMappings;
+  static getPersonByPathname = PersonQueries.getPersonByPathname;
+  static getPersonIDByPathname = PersonQueries.getPersonIDByPathname;
 }
 
 export default Person;

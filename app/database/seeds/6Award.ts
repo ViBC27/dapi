@@ -1,7 +1,7 @@
 import * as Knex from 'knex';
 import Award from '../models/Award';
 
-export async function seed(knex: Knex): Promise<Award[]> {
+export function seed(knex: Knex): Promise<Award[]> {
   return Award.query(knex).insert([
     {
       id: 1,

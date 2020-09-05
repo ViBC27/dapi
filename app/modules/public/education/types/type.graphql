@@ -1,0 +1,11 @@
+type Education {
+  level: String!
+  status: String!
+  course: String!
+  endDate: Date!
+  startDate: Date!
+  workLoad: Int!
+  institution: String!
+  createdAt: String!
+  updatedAt: String!
+}

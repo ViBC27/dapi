@@ -2,7 +2,7 @@ import request from 'supertest';
 import app from '../app/app';
 
 function getURL(pathname: string): string {
-  const first = '/getExperiences?query={getExperiencesByPathname';
+  const first = '/getExperiences?query={experiences';
   const second = `(pathname:"${pathname}"){name, github, createdAt}}`;
   return first + second;
 }
@@ -34,7 +34,7 @@ describe('Endpoints', () => {
     const response = await request(app).get(getURL('donald'));
     expect(response.status).toEqual(200);
     expect(response.body.data).toBeDefined();
-    expect(response.body.data.getExperiencesByPathname).toHaveLength(0);
+    expect(response.body.data.experiences).toHaveLength(0);
     done();
   });
 });

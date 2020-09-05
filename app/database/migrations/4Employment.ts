@@ -1,7 +1,7 @@
 import * as Knex from 'knex';
 
 const tableName = 'employments';
-export async function up(knex: Knex): Promise<Knex.SchemaBuilder> {
+export function up(knex: Knex): Knex.SchemaBuilder {
   return knex.schema.createTable(tableName, t => {
     t.increments('id').primary().notNullable();
     t.decimal('price').nullable();
@@ -11,6 +11,6 @@ export async function up(knex: Knex): Promise<Knex.SchemaBuilder> {
   });
 }
 
-export async function down(knex: Knex): Promise<Knex.SchemaBuilder> {
+export function down(knex: Knex): Knex.SchemaBuilder {
   return knex.schema.dropTable(tableName);
 }

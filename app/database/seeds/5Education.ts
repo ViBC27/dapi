@@ -1,7 +1,7 @@
 import * as Knex from 'knex';
 import Education from '../models/Education';
 
-export async function seed(knex: Knex): Promise<Education[]> {
+export function seed(knex: Knex): Promise<Education[]> {
   return Education.query(knex).insert([
     {
       id: 1,

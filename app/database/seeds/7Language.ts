@@ -1,7 +1,7 @@
 import * as Knex from 'knex';
 import Language from '../models/Language';
 
-export async function seed(knex: Knex): Promise<Language[]> {
+export function seed(knex: Knex): Promise<Language[]> {
   return Language.query(knex).insert([
     {
       id: 1,

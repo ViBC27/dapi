@@ -1,13 +1,13 @@
-import BaseModel from './BaseModel';
+import BaseModelV2 from './BaseModelV2';
+import LanguageQueries from '../queries/Language';
 
-class Language extends BaseModel {
+class Language extends BaseModelV2 {
   id: number;
   name: string;
   level: string;
-  createdAt: Date;
-  updatedAt: Date;
   idPersons: number;
   static tableName = 'languages';
+  static getLanguagesByID = LanguageQueries.getLanguagesByID;
 }
 
 export default Language;

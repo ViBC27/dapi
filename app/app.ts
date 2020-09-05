@@ -12,11 +12,10 @@ app.use(express.json());
 app.locals.database = database;
 
 // Routes
-// app.use('/getAwards', graphqlHTTP({ schema: ExperienceSGQl, graphiql: true }));
-// app.use('/getLanguages', graphqlHTTP({ schema: ExperienceSGQl, graphiql: true }));
-// app.use('/getEducations', graphqlHTTP({ schema: ExperienceSGQl, graphiql: true }));
-
+app.use('/getAwards', graph.use(modules.AwardSGQL));
 app.use('/getPerson', graph.use(modules.PersonSGQL));
+app.use('/getLanguages', graph.use(modules.LanguageSGQL));
+app.use('/getEducations', graph.use(modules.EducationSGQL));
 app.use('/getExperiences', graph.use(modules.ExperienceSGQL));
 
 export default app;

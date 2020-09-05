@@ -1,3 +1,0 @@
-type Query {
-  getPersonByPathname(pathname: String!): [Person!]!
-}

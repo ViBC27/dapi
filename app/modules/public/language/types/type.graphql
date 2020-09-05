@@ -1,0 +1,6 @@
+type Language {
+  name: String!
+  level: String!
+  createdAt: String!
+  updatedAt: String!
+}

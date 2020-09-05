@@ -1,0 +1,7 @@
+type Person {
+  name: String!
+  email: String!
+  pathname: String!
+  createdAt: String!
+  updatedAt: String!
+}

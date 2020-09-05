@@ -19,10 +19,12 @@ rules:
   no-await-in-loop: 2
   no-return-await: 2
   prefer-spread: 1
+  require-await: 2
   prefer-const: 2
   no-var: 2
   max-len: [1, { code: 100 }]
   object-shorthand: [2, always]
+  arrow-body-style: [2, always]
   id-denylist: [2, err, e, cb, callback]
   lines-between-class-members: [1, never]
   no-param-reassign: [2, { props: false }]

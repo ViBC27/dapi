@@ -1,6 +1,6 @@
-import BaseModel from './BaseModel';
+import BaseModelV1 from './BaseModelV1';
 
-class Employment extends BaseModel {
+class Employment extends BaseModelV1 {
   id: number;
   price: number;
   mode: string;

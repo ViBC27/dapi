@@ -1,9 +1,9 @@
 import tags from '../errors/tags';
-import bodies from '../errors/bodies';
 import names from '../errors/names';
-import iError from '../interfaces/iError';
+import { appError } from '../types';
+import bodies from '../errors/bodies';
 
-export default function getErrorByTag(tag: number): iError {
+export default function getErrorByTag(tag: number): appError {
   const code = tags[tag];
   if (!code) {
     const code = tags[0];

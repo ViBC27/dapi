@@ -1,7 +1,7 @@
 import * as Knex from 'knex';
 import Employment from '../models/Employment';
 
-export async function seed(knex: Knex): Promise<Employment[]> {
+export function seed(knex: Knex): Promise<Employment[]> {
   return Employment.query(knex).insert([
     {
       id: 1,
