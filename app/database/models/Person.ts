@@ -12,6 +12,7 @@ class Person extends BaseModelV2 {
   identity: string;
   static tableName = 'persons';
   static relationMappings = PersonMappings;
+  static postPerson = PersonQueries.postPerson;
   static getPersonByPathname = PersonQueries.getPersonByPathname;
   static getPersonIDByPathname = PersonQueries.getPersonIDByPathname;
 }

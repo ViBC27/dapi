@@ -1,0 +1,12 @@
+type Mutation {
+  person(input: inputPerson!): Person!
+}
+
+input inputPerson {
+  name: String!
+  email: String!
+  identity: String!
+  pathname: String!
+  username: String!
+  password: String!
+}
